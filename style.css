@@ -99,7 +99,5 @@ body.dark .mark {
   background: #eee; /* light tick marks */
 }
 
-
-
 .date { margin-top:10px; font-size:1.1rem; color:#555; }
 body.dark .date { color:#ccc; }
