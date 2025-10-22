@@ -94,28 +94,4 @@ function updateClock() {
   setInterval(updateClock,1000);
 }
 
-const canvas = document.getElementById('waveLogo');
-const ctx = canvas.getContext('2d');
-let t = 0;
-
-function drawWave() {
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  ctx.beginPath();
-  ctx.strokeStyle = '#34C759';
-  ctx.lineWidth = 2;
-  
-  for(let x=0; x<canvas.width; x++) {
-    const y = 20*Math.sin((x/20)+t) + canvas.height/2;
-    if(x===0) ctx.moveTo(x,y);
-    else ctx.lineTo(x,y);
-  }
-  
-  ctx.stroke();
-  t += 0.1;
-  requestAnimationFrame(drawWave);
-}
-
-drawWave();
-
-
 initClock();
